@@ -22,13 +22,13 @@ class Radio extends HTMLElement {
                             element: "div",
                             style: {
                                 flex: "1",
-                                marginLeft : "20px",
-                                marginRight : "20px"
+                                marginLeft: "20px",
+                                marginRight: "20px"
                             },
                             children: [
                                 {
                                     element: "h2",
-                                    text: "Dom-If"
+                                    text: "Dom Radio"
                                 },
                                 {
                                     element: "hr"
@@ -43,78 +43,198 @@ class Radio extends HTMLElement {
                                            Example we show that this Radio if altered will reflect in a Text when clicked.`
                                 },
                                 {
-                                    element: "form",
-                                    children : [
+                                    element: "h3",
+                                    text: "API"
+                                },
+                                {
+                                    element: "table",
+                                    children: [
                                         {
-                                            element: MatCheckboxContainer,
-                                            placeholder: "Male",
-                                            content: {
-                                                element: DomInput,
-                                                type: "radio",
-                                                name : "gender",
-                                                use : "male",
-                                                value: {
-                                                    input() {
-                                                        return selected;
-                                                    },
-                                                    output(value) {
-                                                        selected = value;
-                                                    }
+                                            element: "tr",
+                                            children: [
+                                                {
+                                                    element: "td",
+                                                    text: "MatCheckboxContainer"
+                                                },
+                                                {
+                                                    element: "td",
+                                                    text: "placeholder"
+                                                },
+                                                {
+                                                    element: "td",
+                                                    text: "function or string"
                                                 }
-                                            }
+                                            ]
                                         },
                                         {
-                                            element: MatCheckboxContainer,
-                                            placeholder: "Female",
-                                            content: {
-                                                element: DomInput,
-                                                type: "radio",
-                                                name : "gender",
-                                                use : "female",
-                                                value: {
-                                                    input() {
-                                                        return selected;
-                                                    },
-                                                    output(value) {
-                                                        selected = value;
-                                                    }
+                                            element: "tr",
+                                            children: [
+                                                {
+                                                    element: "td",
+                                                    text: "MatCheckboxContainer"
+                                                },
+                                                {
+                                                    element: "td",
+                                                    text: "content"
+                                                },
+                                                {
+                                                    element: "td",
+                                                    text: "element for DomInput"
                                                 }
-                                            }
+                                            ]
                                         },
                                         {
-                                            element: MatCheckboxContainer,
-                                            placeholder: "Other",
-                                            content: {
-                                                element: DomInput,
-                                                type: "radio",
-                                                name : "gender",
-                                                use : "other",
-                                                value: {
-                                                    input() {
-                                                        return selected;
-                                                    },
-                                                    output(value) {
-                                                        selected = value;
-                                                    }
+                                            element: "tr",
+                                            children: [
+                                                {
+                                                    element: "td",
+                                                    text: "DomInput"
+                                                },
+                                                {
+                                                    element: "td",
+                                                    text: "type"
+                                                },
+                                                {
+                                                    element: "td",
+                                                    text: "function or string"
                                                 }
-                                            }
+                                            ]
+                                        },
+                                        {
+                                            element: "tr",
+                                            children: [
+                                                {
+                                                    element: "td",
+                                                    text: "DomInput"
+                                                },
+                                                {
+                                                    element: "td",
+                                                    text: "use"
+                                                },
+                                                {
+                                                    element: "td",
+                                                    text: "function or string"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            element: "tr",
+                                            children: [
+                                                {
+                                                    element: "td",
+                                                    text: "DomInput"
+                                                },
+                                                {
+                                                    element: "td",
+                                                    text: "value"
+                                                },
+                                                {
+                                                    element: "td",
+                                                    text: "object of input and output"
+                                                }
+                                            ]
                                         }
                                     ]
                                 },
                                 {
+                                    element: "h3",
+                                    text: "Example"
+                                },
+                                {
                                     element: "div",
-                                    text() {
-                                        return selected;
-                                    }
+                                    style: {
+                                        position: "relative",
+                                        height: "200px",
+                                        border: "1px solid var(--main-normal-color)"
+                                    },
+                                    children: [
+                                        {
+                                            element: "div",
+                                            style: {
+                                                display: "block",
+                                                position: "absolute",
+                                                top: "50%",
+                                                left: "50%",
+                                                transform: "translate(-50%, -50%)"
+                                            },
+                                            children: [
+                                                {
+                                                    element: "form",
+                                                    children: [
+                                                        {
+                                                            element: MatCheckboxContainer,
+                                                            placeholder: "Male",
+                                                            content: {
+                                                                element: DomInput,
+                                                                type: "radio",
+                                                                name: "gender",
+                                                                use: "male",
+                                                                value: {
+                                                                    input() {
+                                                                        return selected;
+                                                                    },
+                                                                    output(value) {
+                                                                        selected = value;
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            element: MatCheckboxContainer,
+                                                            placeholder: "Female",
+                                                            content: {
+                                                                element: DomInput,
+                                                                type: "radio",
+                                                                name: "gender",
+                                                                use: "female",
+                                                                value: {
+                                                                    input() {
+                                                                        return selected;
+                                                                    },
+                                                                    output(value) {
+                                                                        selected = value;
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            element: MatCheckboxContainer,
+                                                            placeholder: "Other",
+                                                            content: {
+                                                                element: DomInput,
+                                                                type: "radio",
+                                                                name: "gender",
+                                                                use: "other",
+                                                                value: {
+                                                                    input() {
+                                                                        return selected;
+                                                                    },
+                                                                    output(value) {
+                                                                        selected = value;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    element: "div",
+                                                    text() {
+                                                        return selected;
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ]
                         },
                         {
                             element: "div",
                             style: {
-                                flex : "1",
-                                marginLeft : "20px",
-                                marginRight : "20px"
+                                flex: "1",
+                                marginLeft: "20px",
+                                marginRight: "20px"
                             },
                             children: [
                                 {

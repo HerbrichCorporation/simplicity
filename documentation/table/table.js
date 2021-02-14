@@ -25,7 +25,7 @@ class Table extends HTMLElement {
                             children: [
                                 {
                                     element: "h2",
-                                    text: "Dom-If"
+                                    text: "Mat Table"
                                 },
                                 {
                                     element: "hr"
@@ -36,11 +36,7 @@ class Table extends HTMLElement {
                                 },
                                 {
                                     element: "p",
-                                    text: `A Dom-If for displaying only HTML in an If Statement. Better than
-                                            display:none because it is really
-                                            rendered with an If Statement. This checkbox comes with an
-                                            dom-checkbox-container to display the
-                                            placeholder like material design.`
+                                    text: ``
                                 },
                                 {
                                     element: MatTable,

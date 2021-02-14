@@ -28,7 +28,7 @@ class Dialog extends HTMLElement {
                             children: [
                                 {
                                     element: "h2",
-                                    text: "Mat-Dialog"
+                                    text: "Mat Dialog"
                                 },
                                 {
                                     element: "hr"

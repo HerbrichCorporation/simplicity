@@ -28,7 +28,7 @@ class Select2 extends HTMLElement {
                             children: [
                                 {
                                     element: "h2",
-                                    text: "Dom-If"
+                                    text: "Mat Select"
                                 },
                                 {
                                     element: "hr"
@@ -39,42 +39,124 @@ class Select2 extends HTMLElement {
                                 },
                                 {
                                     element: "p",
-                                    text: `A Dom-If for displaying only HTML in an If Statement. Better than
-                                            display:none because it is really
-                                            rendered with an If Statement. This checkbox comes with an
-                                            dom-checkbox-container to display the
-                                            placeholder like material design.`
+                                    text: `Mat Select for displaying Options with a json request`
                                 },
                                 {
-                                    element: MatSelect,
-                                    placeholder: "Select",
-                                    items: {
-                                        direct(query, callback) {
-                                            jsonClient.get("materials.json")
-                                                .then((items) => {
-                                                    let materials;
-                                                    if (query.value) {
-                                                        materials = items
-                                                            .filter(item => item.name.toLowerCase().startsWith(query.value.toLowerCase()))
-                                                            .slice(query.index, query.index + query.limit);
-                                                    } else {
-                                                        materials = items.slice(query.index, query.index + query.limit);
-                                                    }
-                                                    callback(materials, items.length);
-                                                })
-
-                                        },
-                                    },
-                                    meta: {
-                                        option: {
-                                            element(material) {
-                                                return {
-                                                    element: "div",
-                                                    text: material.name
+                                    element : "h3",
+                                    text : "API"
+                                },
+                                {
+                                    element : "table",
+                                    children : [
+                                        {
+                                            element : "tr",
+                                            children : [
+                                                {
+                                                    element : "td",
+                                                    text : "MatSelect"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "placeholder"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "function or string"
                                                 }
-                                            }
+                                            ]
+                                        },
+                                        {
+                                            element : "tr",
+                                            children : [
+                                                {
+                                                    element : "td",
+                                                    text : "MatSelect"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "items"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "function for json request"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            element : "tr",
+                                            children : [
+                                                {
+                                                    element : "td",
+                                                    text : "MatSelect"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "meta"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "Meta for rendering List"
+                                                }
+                                            ]
                                         }
-                                    }
+                                    ]
+                                },
+                                {
+                                    element : "h3",
+                                    text : "Example"
+                                },
+                                {
+                                    element : "div",
+                                    style : {
+                                        position : "relative",
+                                        height : "200px",
+                                        border : "1px solid var(--main-normal-color)"
+                                    },
+                                    children : [
+                                        {
+                                            element : "div",
+                                            style: {
+                                                display: "block",
+                                                position: "absolute",
+                                                top: "50%",
+                                                left: "50%",
+                                                transform: "translate(-50%, -50%)"
+                                            },
+                                            children : [
+                                                {
+                                                    element: MatSelect,
+                                                    placeholder: "Select",
+                                                    items: {
+                                                        direct(query, callback) {
+                                                            jsonClient.get("materials.json")
+                                                                .then((items) => {
+                                                                    let materials;
+                                                                    if (query.value) {
+                                                                        materials = items
+                                                                            .filter(item => item.name.toLowerCase().startsWith(query.value.toLowerCase()))
+                                                                            .slice(query.index, query.index + query.limit);
+                                                                    } else {
+                                                                        materials = items.slice(query.index, query.index + query.limit);
+                                                                    }
+                                                                    callback(materials, items.length);
+                                                                })
+
+                                                        },
+                                                    },
+                                                    meta: {
+                                                        option: {
+                                                            element(material) {
+                                                                return {
+                                                                    element: "div",
+                                                                    text: material.name
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ]
                         },

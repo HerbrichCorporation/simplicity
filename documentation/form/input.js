@@ -43,26 +43,129 @@ class Input extends HTMLElement {
                                            Example we show that this Input if altered will reflect in a Text when clicked.`
                                 },
                                 {
-                                    element: MatInputContainer,
-                                    placeholder: "Input",
-                                    content: {
-                                        element: DomInput,
-                                        type: "text",
-                                        value: {
-                                            input() {
-                                                return text;
-                                            },
-                                            output(value) {
-                                                text = value;
-                                            }
-                                        }
-                                    }
+                                    element : "h3",
+                                    text : "API"
                                 },
                                 {
-                                    element: "div",
-                                    text() {
-                                        return text;
-                                    }
+                                    element : "table",
+                                    children : [
+                                        {
+                                            element : "tr",
+                                            children : [
+                                                {
+                                                    element : "td",
+                                                    text : "MatInputContainer"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "placeholder"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "function or string"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            element : "tr",
+                                            children : [
+                                                {
+                                                    element : "td",
+                                                    text : "MatInputContainer"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "content"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "element for DomInput"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            element : "tr",
+                                            children : [
+                                                {
+                                                    element : "td",
+                                                    text : "DomInput"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "type"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "function or string"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            element : "tr",
+                                            children : [
+                                                {
+                                                    element : "td",
+                                                    text : "DomInput"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "value"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "object of input and output"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    element : "h3",
+                                    text : "Example"
+                                },
+                                {
+                                    element : "div",
+                                    style : {
+                                        position : "relative",
+                                        height : "200px",
+                                        border : "1px solid var(--main-normal-color)"
+                                    },
+                                    children : [
+                                        {
+                                            element : "div",
+                                            style: {
+                                                display: "block",
+                                                position: "absolute",
+                                                top: "50%",
+                                                left: "50%",
+                                                transform: "translate(-50%, -50%)"
+                                            },
+                                            children : [
+                                                {
+                                                    element: MatInputContainer,
+                                                    placeholder: "Input",
+                                                    content: {
+                                                        element: DomInput,
+                                                        type: "text",
+                                                        value: {
+                                                            input() {
+                                                                return text;
+                                                            },
+                                                            output(value) {
+                                                                text = value;
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    element: "div",
+                                                    text() {
+                                                        return text;
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ]
                         },

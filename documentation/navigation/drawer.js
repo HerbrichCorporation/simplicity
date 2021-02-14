@@ -34,7 +34,7 @@ class Drawer extends HTMLElement {
                             children: [
                                 {
                                     element: "h2",
-                                    text: "Mat-Drawer"
+                                    text: "Mat Drawer"
                                 },
                                 {
                                     element: "hr"

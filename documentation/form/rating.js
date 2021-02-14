@@ -27,7 +27,7 @@ class Rating extends HTMLElement {
                             children: [
                                 {
                                     element: "h2",
-                                    text: "Dom-If"
+                                    text: "Mat Rating"
                                 },
                                 {
                                     element: "hr"
@@ -38,15 +38,114 @@ class Rating extends HTMLElement {
                                 },
                                 {
                                     element: "p",
-                                    text: `A Dom-If for displaying only HTML in an If Statement. Better than
-                                            display:none because it is really
-                                            rendered with an If Statement. This checkbox comes with an
-                                            dom-checkbox-container to display the
-                                            placeholder like material design.`
+                                    text: ``
                                 },
                                 {
-                                    element: MatRating,
-                                    name : "rating"
+                                    element : "h3",
+                                    text : "API"
+                                },
+                                {
+                                    element : "table",
+                                    children : [
+                                        {
+                                            element : "tr",
+                                            children : [
+                                                {
+                                                    element : "td",
+                                                    text : "MatCheckboxContainer"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "placeholder"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "function or string"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            element : "tr",
+                                            children : [
+                                                {
+                                                    element : "td",
+                                                    text : "MatCheckboxContainer"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "content"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "element for DomInput"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            element : "tr",
+                                            children : [
+                                                {
+                                                    element : "td",
+                                                    text : "DomInput"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "type"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "function or string"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            element : "tr",
+                                            children : [
+                                                {
+                                                    element : "td",
+                                                    text : "DomInput"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "value"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "object of input and output"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    element : "h3",
+                                    text : "Example"
+                                },
+                                {
+                                    element : "div",
+                                    style : {
+                                        position : "relative",
+                                        height : "200px",
+                                        border : "1px solid var(--main-normal-color)"
+                                    },
+                                    children : [
+                                        {
+                                            element : "div",
+                                            style: {
+                                                display: "block",
+                                                position: "absolute",
+                                                top: "50%",
+                                                left: "50%",
+                                                transform: "translate(-50%, -50%)"
+                                            },
+                                            children : [
+                                                {
+                                                    element: MatRating,
+                                                    name : "rating"
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ]
                         },
@@ -107,6 +206,6 @@ class Rating extends HTMLElement {
 }
 
 export default customViews.define({
-    name: "documentation-common-if",
+    name: "documentation-form-rating",
     class: Rating
 })

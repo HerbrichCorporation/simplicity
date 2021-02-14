@@ -43,6 +43,70 @@ class Editor extends HTMLElement {
                                     text: `An HTML Editor`
                                 },
                                 {
+                                    element : "h3",
+                                    text : "API"
+                                },
+                                {
+                                    element : "table",
+                                    children : [
+                                        {
+                                            element : "tr",
+                                            children : [
+                                                {
+                                                    element : "td",
+                                                    text : "MatEditor"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "imageDialog"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "factory for Image Dialog"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            element : "tr",
+                                            children : [
+                                                {
+                                                    element : "td",
+                                                    text : "MatEditor"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "linkDialog"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "factory for Link Dialog"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            element : "tr",
+                                            children : [
+                                                {
+                                                    element : "td",
+                                                    text : "MatEditor"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "value"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "object of input and output"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    element : "h3",
+                                    text : "Example"
+                                },
+                                {
                                     element: MatEditor,
                                     style : {
                                         height : "calc(100vh - 560px)"

@@ -22,13 +22,13 @@ class Select extends HTMLElement {
                             element: "div",
                             style: {
                                 flex: "1",
-                                marginLeft : "20px",
-                                marginRight : "20px"
+                                marginLeft: "20px",
+                                marginRight: "20px"
                             },
                             children: [
                                 {
                                     element: "h2",
-                                    text: "Dom-Select"
+                                    text: "Dom Select"
                                 },
                                 {
                                     element: "hr"
@@ -43,56 +43,142 @@ class Select extends HTMLElement {
                                             Example we show that this Select if altered will reflect in a Text when clicked.`
                                 },
                                 {
-                                    element: MatInputContainer,
-                                    placeholder: "Select",
-                                    content: {
-                                        element: DomSelect,
-                                        value: {
-                                            input() {
-                                                return selected;
-                                            },
-                                            output(value) {
-                                                selected = value;
-                                            }
+                                    element: "h3",
+                                    text: "API"
+                                },
+                                {
+                                    element: "table",
+                                    children: [
+                                        {
+                                            element: "tr",
+                                            children: [
+                                                {
+                                                    element: "td",
+                                                    text: "MatInputContainer"
+                                                },
+                                                {
+                                                    element: "td",
+                                                    text: "placeholder"
+                                                },
+                                                {
+                                                    element: "td",
+                                                    text: "function or string"
+                                                }
+                                            ]
                                         },
-                                        children : [
-                                            {
-                                                element: "option",
-                                                value : "volvo",
-                                                text : "Volvo"
-                                            },
-                                            {
-                                                element: "option",
-                                                value : "saab",
-                                                text : "Saab"
-                                            },
-                                            {
-                                                element: "option",
-                                                value : "fiat",
-                                                text : "Fiat"
-                                            },
-                                            {
-                                                element: "option",
-                                                value : "audi",
-                                                text : "Audi"
-                                            }
-                                        ]
-                                    }
+                                        {
+                                            element: "tr",
+                                            children: [
+                                                {
+                                                    element: "td",
+                                                    text: "MatInputContainer"
+                                                },
+                                                {
+                                                    element: "td",
+                                                    text: "content"
+                                                },
+                                                {
+                                                    element: "td",
+                                                    text: "element for DomInput"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            element: "tr",
+                                            children: [
+                                                {
+                                                    element: "td",
+                                                    text: "DomSelect"
+                                                },
+                                                {
+                                                    element: "td",
+                                                    text: "value"
+                                                },
+                                                {
+                                                    element: "td",
+                                                    text: "object of input and output"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    element: "h3",
+                                    text: "Example"
                                 },
                                 {
                                     element: "div",
-                                    text() {
-                                        return selected;
-                                    }
+                                    style: {
+                                        position: "relative",
+                                        height: "200px",
+                                        border: "1px solid var(--main-normal-color)"
+                                    },
+                                    children: [
+                                        {
+                                            element: "div",
+                                            style: {
+                                                display: "block",
+                                                position: "absolute",
+                                                top: "50%",
+                                                left: "50%",
+                                                transform: "translate(-50%, -50%)"
+                                            },
+                                            children: [
+                                                {
+                                                    element: MatInputContainer,
+                                                    placeholder: "Select",
+                                                    content: {
+                                                        element: DomSelect,
+                                                        value: {
+                                                            input() {
+                                                                return selected;
+                                                            },
+                                                            output(value) {
+                                                                selected = value;
+                                                            }
+                                                        },
+                                                        children: [
+                                                            {
+                                                                element: "option",
+                                                                value: "volvo",
+                                                                text: "Volvo"
+                                                            },
+                                                            {
+                                                                element: "option",
+                                                                value: "saab",
+                                                                text: "Saab"
+                                                            },
+                                                            {
+                                                                element: "option",
+                                                                value: "fiat",
+                                                                text: "Fiat"
+                                                            },
+                                                            {
+                                                                element: "option",
+                                                                value: "audi",
+                                                                text: "Audi"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    element: "div",
+                                                    text() {
+                                                        return selected;
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ]
                         },
                         {
                             element: "div",
                             style: {
-                                flex : "1",
-                                marginLeft : "20px",
-                                marginRight : "20px"
+                                flex: "1",
+                                marginLeft: "20px",
+                                marginRight: "20px"
                             },
                             children: [
                                 {
@@ -176,6 +262,6 @@ class Select extends HTMLElement {
 }
 
 export default customViews.define({
-    name : "documentation-form-select",
-    class : Select
+    name: "documentation-form-select",
+    class: Select
 })
