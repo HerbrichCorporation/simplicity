@@ -39,32 +39,115 @@ class Menu extends HTMLElement {
                                     text: ``
                                 },
                                 {
-                                    element: MatMenu,
-                                    content : {
-                                        element : "div",
-                                        text : "Menu"
-                                    },
-                                    subMenu : [
+                                    element : "h3",
+                                    text : "API"
+                                },
+                                {
+                                    element : "table",
+                                    children : [
                                         {
-                                            element : MatMenuItem,
-                                            content : {
-                                                element : "div",
-                                                text : "Menu1"
-                                            }
+                                            element : "tr",
+                                            children : [
+                                                {
+                                                    element : "td",
+                                                    text : "MatMenu"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "content"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "content for Menu"
+                                                }
+                                            ]
                                         },
                                         {
-                                            element : MatMenuItem,
-                                            content : {
-                                                element : "div",
-                                                text : "Menu2"
-                                            }
+                                            element : "tr",
+                                            children : [
+                                                {
+                                                    element : "td",
+                                                    text : "MatMenu"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "subMenu"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "element for MatMenuItem"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            element : "tr",
+                                            children : [
+                                                {
+                                                    element : "td",
+                                                    text : "MatMenuItem"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "content"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "content for element"
+                                                }
+                                            ]
                                         }
                                     ]
-                                },{
+                                },
+                                {
+                                    element : "h3",
+                                    text : "Example"
+                                },
+                                {
                                     element : "div",
-                                    text : "Content"
+                                    style : {
+                                        position : "relative",
+                                        height : "200px",
+                                        border : "1px solid var(--main-normal-color)"
+                                    },
+                                    children : [
+                                        {
+                                            element : "div",
+                                            style: {
+                                                display: "block",
+                                                position: "absolute",
+                                                top: "50%",
+                                                left: "50%",
+                                                transform: "translate(-50%, -50%)"
+                                            },
+                                            children : [
+                                                {
+                                                    element: MatMenu,
+                                                    content : {
+                                                        element : "div",
+                                                        text : "Menu"
+                                                    },
+                                                    subMenu : [
+                                                        {
+                                                            element : MatMenuItem,
+                                                            content : {
+                                                                element : "div",
+                                                                text : "Menu1"
+                                                            }
+                                                        },
+                                                        {
+                                                            element : MatMenuItem,
+                                                            content : {
+                                                                element : "div",
+                                                                text : "Menu2"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
-                            ]
+                                ]
                         },
                         {
                             element: "div",
@@ -121,9 +204,6 @@ class Menu extends HTMLElement {
                                     }
                                 }
                             ]
-                        },{
-                            element : "div",
-                            text : "Content"
                         }
                     ]
                 })

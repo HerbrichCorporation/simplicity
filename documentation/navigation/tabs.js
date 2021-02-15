@@ -24,8 +24,8 @@ class Tabs extends HTMLElement {
                             element: "div",
                             style: {
                                 flex: "1",
-                                marginLeft : "20px",
-                                marginRight : "20px"
+                                marginLeft: "20px",
+                                marginRight: "20px"
                             },
                             children: [
                                 {
@@ -44,51 +44,189 @@ class Tabs extends HTMLElement {
                                     text: ``
                                 },
                                 {
-                                    element: MatTabs,
-                                    onPage(event) {
-                                        page = event.detail.page;
-                                    },
-                                    contents : [
-                                        {
-                                            element : MatTab,
-                                            content : {
-                                                element : "div",
-                                                text : "Home"
-                                            }
-                                        },
-                                        {
-                                            element : MatTab,
-                                            content : {
-                                                element : "div",
-                                                text : "User"
-                                            }
-                                        }
-                                    ]
+                                    element: "h3",
+                                    text: "API"
                                 },
                                 {
-                                    element: MatPages,
-                                    page : {
-                                        input() {
-                                            return page;
-                                        }
-                                    },
-                                    contents : [
+                                    element: "table",
+                                    children: [
                                         {
-                                            element : MatPage,
-                                            contents : [
+                                            element: "tr",
+                                            children: [
                                                 {
-                                                    element : "div",
-                                                    text : "Home"
+                                                    element: "td",
+                                                    text: "MatTabs"
+                                                },
+                                                {
+                                                    element: "td",
+                                                    text: "onPage"
+                                                },
+                                                {
+                                                    element: "td",
+                                                    text: "function"
                                                 }
                                             ]
                                         },
                                         {
-                                            element : MatPage,
-                                            contents : [
+                                            element: "tr",
+                                            children: [
                                                 {
-                                                    element : "div",
-                                                    text : "User"
+                                                    element: "td",
+                                                    text: "MatTabs"
+                                                },
+                                                {
+                                                    element: "td",
+                                                    text: "contents"
+                                                },
+                                                {
+                                                    element: "td",
+                                                    text: "content for elements"
                                                 }
+                                            ]
+                                        },
+                                        {
+                                            element: "tr",
+                                            children: [
+                                                {
+                                                    element: "td",
+                                                    text: "MatTab"
+                                                },
+                                                {
+                                                    element: "td",
+                                                    text: "content"
+                                                },
+                                                {
+                                                    element: "td",
+                                                    text: "content for element"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            element: "tr",
+                                            children: [
+                                                {
+                                                    element: "td",
+                                                    text: "MatPages"
+                                                },
+                                                {
+                                                    element: "td",
+                                                    text: "page"
+                                                },
+                                                {
+                                                    element: "td",
+                                                    text: "function for page selection"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            element: "tr",
+                                            children: [
+                                                {
+                                                    element: "td",
+                                                    text: "MatPages"
+                                                },
+                                                {
+                                                    element: "td",
+                                                    text: "contents"
+                                                },
+                                                {
+                                                    element: "td",
+                                                    text: "contents for MatPage array"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            element: "tr",
+                                            children: [
+                                                {
+                                                    element: "td",
+                                                    text: "MatPage"
+                                                },
+                                                {
+                                                    element: "td",
+                                                    text: "contents"
+                                                },
+                                                {
+                                                    element: "td",
+                                                    text: "contents for element array"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    element: "h3",
+                                    text: "Example"
+                                },
+                                {
+                                    element: "div",
+                                    style: {
+                                        position: "relative",
+                                        height: "200px",
+                                        border: "1px solid var(--main-normal-color)"
+                                    },
+                                    children: [
+                                        {
+                                            element: "div",
+                                            style: {
+                                                display: "block",
+                                                position: "absolute",
+                                                top: "50%",
+                                                left: "50%",
+                                                transform: "translate(-50%, -50%)"
+                                            },
+                                            children: [
+                                                {
+                                                    element: MatTabs,
+                                                    onPage(event) {
+                                                        page = event.detail.page;
+                                                    },
+                                                    contents: [
+                                                        {
+                                                            element: MatTab,
+                                                            content: {
+                                                                element: "div",
+                                                                text: "Home"
+                                                            }
+                                                        },
+                                                        {
+                                                            element: MatTab,
+                                                            content: {
+                                                                element: "div",
+                                                                text: "User"
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    element: MatPages,
+                                                    page: {
+                                                        input() {
+                                                            return page;
+                                                        }
+                                                    },
+                                                    contents: [
+                                                        {
+                                                            element: MatPage,
+                                                            contents: [
+                                                                {
+                                                                    element: "div",
+                                                                    text: "Home"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            element: MatPage,
+                                                            contents: [
+                                                                {
+                                                                    element: "div",
+                                                                    text: "User"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+
                                             ]
                                         }
                                     ]
@@ -98,9 +236,9 @@ class Tabs extends HTMLElement {
                         {
                             element: "div",
                             style: {
-                                flex : "1",
-                                marginLeft : "20px",
-                                marginRight : "20px"
+                                flex: "1",
+                                marginLeft: "20px",
+                                marginRight: "20px"
                             },
                             children: [
                                 {

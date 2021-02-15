@@ -4,6 +4,9 @@ class MatProgress extends HTMLElement {
     initialize(that) {
         return class  {
             render() {
+
+                that.style.display = "block"
+
                 builder(that, {
                     element : "div",
                     className : "progress",

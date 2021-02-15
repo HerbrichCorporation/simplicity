@@ -41,7 +41,36 @@ class Progress extends HTMLElement {
                                     text: ``
                                 },
                                 {
-                                    element: MatProgress,
+                                    element : "h3",
+                                    text : "Example"
+                                },
+                                {
+                                    element : "div",
+                                    style : {
+                                        position : "relative",
+                                        height : "200px",
+                                        border : "1px solid var(--main-normal-color)"
+                                    },
+                                    children : [
+                                        {
+                                            element : "div",
+                                            style: {
+                                                display: "block",
+                                                position: "absolute",
+                                                top: "50%",
+                                                left: "50%",
+                                                transform: "translate(-50%, -50%)"
+                                            },
+                                            children : [
+                                                {
+                                                    element: MatProgress,
+                                                    style : {
+                                                        width : "200px"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ]
                         },

@@ -46,27 +46,53 @@ class If extends HTMLElement {
                                             placeholder like material design.`
                                 },
                                 {
-                                    element: MatCheckboxContainer,
-                                    placeholder: "Check Box",
-                                    content: {
-                                        element: DomInput,
-                                        type: "checkbox",
-                                        value: {
-                                            input() {
-                                                return selected;
-                                            },
-                                            output(value) {
-                                                selected = value;
-                                            }
-                                        }
-                                    }
+                                    element : "h3",
+                                    text : "Example"
                                 },
                                 {
-                                    element: "div",
-                                    if() {
-                                        return selected
+                                    element : "div",
+                                    style : {
+                                        position : "relative",
+                                        height : "200px",
+                                        border : "1px solid var(--main-normal-color)"
                                     },
-                                    text: "Selected"
+                                    children : [
+                                        {
+                                            element : "div",
+                                            style: {
+                                                display: "block",
+                                                position: "absolute",
+                                                top: "50%",
+                                                left: "50%",
+                                                transform: "translate(-50%, -50%)"
+                                            },
+                                            children : [
+                                                {
+                                                    element: MatCheckboxContainer,
+                                                    placeholder: "Check Box",
+                                                    content: {
+                                                        element: DomInput,
+                                                        type: "checkbox",
+                                                        value: {
+                                                            input() {
+                                                                return selected;
+                                                            },
+                                                            output(value) {
+                                                                selected = value;
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    element: "div",
+                                                    if() {
+                                                        return selected
+                                                    },
+                                                    text: "Selected"
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ]
                         },

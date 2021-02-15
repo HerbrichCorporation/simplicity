@@ -52,6 +52,10 @@ class meta extends HTMLElement {
                                             selects an HTML Element with the localName and content simply inserts the content Children.`
                                 },
                                 {
+                                    element : "h3",
+                                    text : "Example"
+                                },
+                                {
                                     element: Example,
                                     items : {
                                         input() {

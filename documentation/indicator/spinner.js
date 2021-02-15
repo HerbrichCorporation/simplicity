@@ -41,9 +41,35 @@ class Spinner extends HTMLElement {
                                     text: ``
                                 },
                                 {
-                                    element: MatSpinner,
+                                    element : "h3",
+                                    text : "Example"
+                                },
+                                {
+                                    element : "div",
+                                    style : {
+                                        position : "relative",
+                                        height : "200px",
+                                        border : "1px solid var(--main-normal-color)"
+                                    },
+                                    children : [
+                                        {
+                                            element : "div",
+                                            style: {
+                                                display: "block",
+                                                position: "absolute",
+                                                top: "50%",
+                                                left: "50%",
+                                                transform: "translate(-50%, -50%)"
+                                            },
+                                            children : [
+                                                {
+                                                    element: MatSpinner
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
-                            ]
+                                ]
                         },
                         {
                             element: "div",

@@ -48,63 +48,188 @@ class Drawer extends HTMLElement {
                                     text: `The Material Drawer is for side navigation and works perfectly with responsive UI Design.`
                                 },
                                 {
-                                    element: "div",
+                                    element : "h3",
+                                    text : "API"
+                                },
+                                {
+                                    element : "table",
                                     children : [
                                         {
-                                            element: MatToolbar,
-                                            left : [
+                                            element : "tr",
+                                            children : [
                                                 {
-                                                    element: "button",
-                                                    type: "button",
-                                                    className: "icon",
-                                                    onClick() {
-                                                        toggle();
-                                                    },
-                                                    style : {
-                                                        backgroundColor : "var(--main-normal-color)",
-                                                        fontSize : "x-large"
-                                                    },
-                                                    text: "menu"
+                                                    element : "td",
+                                                    text : "MatDrawerContainer"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "drawer"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "element for MatDrawer"
                                                 }
                                             ]
                                         },
                                         {
-                                            element: MatDrawerContainer,
-                                            drawer : {
-                                                element : MatDrawer,
-                                                open : {
-                                                    input() {
-                                                        return open;
-                                                    }
+                                            element : "tr",
+                                            children : [
+                                                {
+                                                    element : "td",
+                                                    text : "MatDrawerContainer"
                                                 },
-                                                content : [
-                                                    {
-                                                        element : "ul",
-                                                        children : [
-                                                            {
-                                                                element : "li",
-                                                                text : "Link to Resource 1"
-                                                            },
-                                                            {
-                                                                element : "li",
-                                                                text : "Link to Resource 2"
-                                                            },
-                                                            {
-                                                                element : "li",
-                                                                text : "Link to Resource 3"
-                                                            }
-                                                        ]
-                                                    }
-                                                ]
-                                            },
-                                            content : {
-                                                element: MatDrawerContent,
-                                                content : {
-                                                    element : "div",
-                                                    text : "it Work's !"
+                                                {
+                                                    element : "td",
+                                                    text : "content"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "element for MatDrawerContent"
                                                 }
-                                            }
+                                            ]
+                                        },
+                                        {
+                                            element : "tr",
+                                            children : [
+                                                {
+                                                    element : "td",
+                                                    text : "MatDrawer"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "open"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "function"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            element : "tr",
+                                            children : [
+                                                {
+                                                    element : "td",
+                                                    text : "MatDrawer"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "content"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "array of elements"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            element : "tr",
+                                            children : [
+                                                {
+                                                    element : "td",
+                                                    text : "MatDrawerContent"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "content"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "content for element"
+                                                }
+                                            ]
                                         }
+                                    ]
+                                },
+                                {
+                                    element : "h3",
+                                    text : "Example"
+                                },
+                                {
+                                    element : "div",
+                                    style : {
+                                        position : "relative",
+                                        height : "200px",
+                                        border : "1px solid var(--main-normal-color)"
+                                    },
+                                    children : [
+                                        {
+                                            element : "div",
+                                            style: {
+                                                display: "block",
+                                                position: "absolute",
+                                                top: "50%",
+                                                left: "50%",
+                                                transform: "translate(-50%, -50%)"
+                                            },
+                                            children : [
+                                                {
+                                                    element: "div",
+                                                    children : [
+                                                        {
+                                                            element: MatToolbar,
+                                                            style : {
+                                                                width : "600px"
+                                                            },
+                                                            left : [
+                                                                {
+                                                                    element: "button",
+                                                                    type: "button",
+                                                                    className: "icon",
+                                                                    onClick() {
+                                                                        toggle();
+                                                                    },
+                                                                    style : {
+                                                                        backgroundColor : "var(--main-normal-color)",
+                                                                        fontSize : "x-large"
+                                                                    },
+                                                                    text: "menu"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            element: MatDrawerContainer,
+                                                            drawer : {
+                                                                element : MatDrawer,
+                                                                open : {
+                                                                    input() {
+                                                                        return open;
+                                                                    }
+                                                                },
+                                                                content : [
+                                                                    {
+                                                                        element : "ul",
+                                                                        children : [
+                                                                            {
+                                                                                element : "li",
+                                                                                text : "Link to Resource 1"
+                                                                            },
+                                                                            {
+                                                                                element : "li",
+                                                                                text : "Link to Resource 2"
+                                                                            },
+                                                                            {
+                                                                                element : "li",
+                                                                                text : "Link to Resource 3"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            content : {
+                                                                element: MatDrawerContent,
+                                                                content : {
+                                                                    element : "div",
+                                                                    text : "it Work's !"
+                                                                }
+                                                            }
+                                                        }
+
+                                                    ]
+                                        }
+                                    ]
+                                }
+
                                     ]
                                 }
                             ]

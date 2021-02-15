@@ -48,46 +48,98 @@ class Form extends HTMLElement {
                                     text: `A derived Form for validating all Fields in the Formular`
                                 },
                                 {
-                                    element: DomForm,
-                                    value : {
-                                        input() {
-                                            return material;
-                                        },
-                                        output(value) {
-                                            material = value;
+                                    element : "h3",
+                                    text : "API"
+                                },
+                                {
+                                    element : "table",
+                                    children : [
+                                        {
+                                            element : "tr",
+                                            children : [
+                                                {
+                                                    element : "td",
+                                                    text : "DomForm"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "value"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "object of input and output"
+                                                }
+                                            ]
                                         }
+                                    ]
+                                },
+                                {
+                                    element : "h3",
+                                    text : "Example"
+                                },
+                                {
+                                    element : "div",
+                                    style : {
+                                        position : "relative",
+                                        height : "200px",
+                                        border : "1px solid var(--main-normal-color)"
                                     },
-                                    children: [
+                                    children : [
                                         {
-                                            element: MatInputContainer,
-                                            placeholder: "Name",
-                                            content: {
-                                                element: DomInput,
-                                                type: "text",
-                                                name: "name"
-                                            }
-                                        },
-                                        {
-                                            element: MatInputContainer,
-                                            placeholder: "Weight",
-                                            content: {
-                                                element: DomInput,
-                                                type: "number",
-                                                name: "weight"
-                                            }
-                                        },
-                                        {
-                                            element: MatInputContainer,
-                                            placeholder: "Symbol",
-                                            content: {
-                                                element: DomInput,
-                                                type: "text",
-                                                name: "symbol"
-                                            }
+                                            element : "div",
+                                            style: {
+                                                display: "block",
+                                                position: "absolute",
+                                                top: "50%",
+                                                left: "50%",
+                                                transform: "translate(-50%, -50%)"
+                                            },
+                                            children : [
+                                                {
+                                                    element: DomForm,
+                                                    value : {
+                                                        input() {
+                                                            return material;
+                                                        },
+                                                        output(value) {
+                                                            material = value;
+                                                        }
+                                                    },
+                                                    children: [
+                                                        {
+                                                            element: MatInputContainer,
+                                                            placeholder: "Name",
+                                                            content: {
+                                                                element: DomInput,
+                                                                type: "text",
+                                                                name: "name"
+                                                            }
+                                                        },
+                                                        {
+                                                            element: MatInputContainer,
+                                                            placeholder: "Weight",
+                                                            content: {
+                                                                element: DomInput,
+                                                                type: "number",
+                                                                name: "weight"
+                                                            }
+                                                        },
+                                                        {
+                                                            element: MatInputContainer,
+                                                            placeholder: "Symbol",
+                                                            content: {
+                                                                element: DomInput,
+                                                                type: "text",
+                                                                name: "symbol"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
-                            ]
+                                ]
                         },
                         {
                             element: "div",

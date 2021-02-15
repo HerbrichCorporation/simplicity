@@ -51,6 +51,10 @@ class Repeat extends HTMLElement {
                                            the given items. The other attribute item is for the variable in the called repeat-loop.`
                                 },
                                 {
+                                    element : "h3",
+                                    text : "Example"
+                                },
+                                {
                                     element: "div",
                                     children: {
                                         items() {

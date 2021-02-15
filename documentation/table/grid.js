@@ -61,6 +61,53 @@ class Grid extends HTMLElement {
                                     text: ``
                                 },
                                 {
+                                    element : "h3",
+                                    text : "API"
+                                },
+                                {
+                                    element : "table",
+                                    children : [
+                                        {
+                                            element : "tr",
+                                            children : [
+                                                {
+                                                    element : "td",
+                                                    text : "MatGrid"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "items"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "function for json request"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            element : "tr",
+                                            children : [
+                                                {
+                                                    element : "td",
+                                                    text : "MatGrid"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "meta"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "meta for displaying the grid items"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    element : "h3",
+                                    text : "Example"
+                                },
+                                {
                                     element: MatGrid,
                                     items: {
                                         direct: items

@@ -39,6 +39,53 @@ class Table extends HTMLElement {
                                     text: ``
                                 },
                                 {
+                                    element : "h3",
+                                    text : "API"
+                                },
+                                {
+                                    element : "table",
+                                    children : [
+                                        {
+                                            element : "tr",
+                                            children : [
+                                                {
+                                                    element : "td",
+                                                    text : "MatTable"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "items"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "function for json request"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            element : "tr",
+                                            children : [
+                                                {
+                                                    element : "td",
+                                                    text : "MatTable"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "meta"
+                                                },
+                                                {
+                                                    element : "td",
+                                                    text : "meta for rendering header and body"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    element : "h3",
+                                    text : "Example"
+                                },
+                                {
                                     element: MatTable,
                                     items: {
                                         direct(query, callback) {
